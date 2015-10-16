@@ -1,6 +1,16 @@
-
 from matplotlib.colors import LinearSegmentedColormap
 
+"""Circular colormap for white-blue-black-red-white.
+
+The colors begin with off-white, ranges through blue to off-black,
+then to red and back to off-white. Perceptual lightness contrast and
+color contrast are uniform over the whole value range. The colormap
+prints as perfect white-black-white, and works equally well with color
+blindness.
+
+"""
+
+__all__ = ['twilight']
 
 cm_data = [[ 0.94398606,  0.92379568,  0.95378996],
            [ 0.85892107,  0.86872657,  0.88695835],
@@ -38,8 +48,10 @@ cm_data = [[ 0.94398606,  0.92379568,  0.95378996],
            [ 0.8870694 ,  0.85986781,  0.86433525],
            [ 0.94398606,  0.92379568,  0.95378996]]
 
-test_cm = LinearSegmentedColormap.from_list(__file__, cm_data)
+twilight = LinearSegmentedColormap.from_list('twilight', cm_data)
 
+# for viscm:
+test_cm = twilight
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
