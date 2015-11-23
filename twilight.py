@@ -10,7 +10,7 @@ blindness.
 
 """
 
-__all__ = ['twilight']
+__all__ = ['twilight', 'sunlight']
 
 cm_data = [[ 0.94398606,  0.92379568,  0.95378996],
            [ 0.85892107,  0.86872657,  0.88695835],
@@ -49,6 +49,8 @@ cm_data = [[ 0.94398606,  0.92379568,  0.95378996],
            [ 0.94398606,  0.92379568,  0.95378996]]
 
 twilight = LinearSegmentedColormap.from_list('twilight', cm_data)
+sunlight = LinearSegmentedColormap.from_list('sunlight', [*cm_data[len(cm_data)//2:],
+                                                          *cm_data[:len(cm_data)//2]])
 
 # for viscm:
 test_cm = twilight
