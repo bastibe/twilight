@@ -1,5 +1,7 @@
 # Twilight -- A Circular Color Map
 
+**NOTE: This has been merged into [Matplotlib](https://matplotlib.org/stable/tutorials/colors/colormaps.html#cyclic).**
+
 The colors begin with off-white, ranges through blue to off-black,
 then to red and back to off-white. Perceptual lightness contrast and
 color contrast are uniform over the whole value range. The colormap
